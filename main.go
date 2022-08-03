@@ -1,8 +1,8 @@
 package main
 
 import (
-	//utilities "ExpenseTracker/Utilities"
 	service "ExpenseTracker/Services"
+	utilities "ExpenseTracker/Utilities"
 	controller "Expensetracker/Controllers"
 	"flag"
 	"fmt"
@@ -14,8 +14,12 @@ import (
 
 func main() {
 	port := flag.String("port", "9005", "Service active Port number, default: 9999")
+	//configFile := flag.String("config", "config", "Config JSON file name,default: config")
 	fmt.Println("Hello world !")
 	// utilities.ConnectDB()
+
+	utilities.Loadconfig()
+
 	fmt.Println("Application running on port", *port)
 
 	r := chi.NewRouter()

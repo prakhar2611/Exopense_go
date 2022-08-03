@@ -1,5 +1,5 @@
 // Not using it currently
-// package Utilities
+package Utilities
 
 // import (
 // 	"database/sql"
